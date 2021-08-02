@@ -64,11 +64,17 @@ function RandomEpisode(season,special,distant) {
 
 function data() {
   var temp=prompt("Enter a season (enter a number 1-10 if you want a season or anything else if you dont)","0");
-  var temp1=prompt("enter '1' to include special episodes and anything else if you dont", "0");
-  var temp2=prompt("enter '1' to include distant lands episodes and anything else if you dont","0");
+  var temp1=confirm("If you want to include special episodes press 'okay' for yes or 'cancel' for no");
+  var temp2=confirm("If you want to include distant lands press 'okay' for yes or 'cancel' for no");
   var seasonConfirm=parseInt(temp);
-  var specialConfirm=parseInt(temp1);
-  var distantConfirm=parseInt(temp2);
+  if(temp1==true)
+    specialConfirm=1;
+  else
+    specialConfirm=0;
+  if(temp2==true)
+    distantConfirm=1;
+  else
+    distantConfirm=0;
   RandomEpisode(seasonConfirm,specialConfirm,distantConfirm);
 }
 
