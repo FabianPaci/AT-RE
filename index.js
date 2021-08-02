@@ -61,3 +61,21 @@ function RandomEpisode(season,special,distant) {
   else
     window.location.href=episodes[Math.floor(Math.random() * (range[1] - range[0]) + range[0])];
 }
+
+function data() {
+  var temp=prompt("Enter a season (enter a number 1-10 if you want a season or anything else if you dont)","0");
+  var temp1=prompt("enter '1' to include special episodes and anything else if you dont", "0");
+  var temp2=prompt("enter '1' to include distant lands episodes and anything else if you dont","0");
+  var seasonConfirm=parseInt(temp);
+  var specialConfirm=parseInt(temp1);
+  var distantConfirm=parseInt(temp2);
+  RandomEpisode(seasonConfirm,specialConfirm,distantConfirm)
+}
+
+if(window.location.href.search("adventure-time.best/seasons")) {
+  node = document.getElementById('comments');
+	node.insertAdjacentHTML('beforeend', '<button type="button" onclick="data();">Random Episode (addon)</button>');
+} else if(window.location.href.search("adventure-time.best/adventure-time-s")) {
+  node = document.getElementById('Blog1');
+	node.insertAdjacentHTML('beforebegin', '<button type="button" onclick="data();">Random Episode (addon)</button>');
+}
