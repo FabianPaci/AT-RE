@@ -69,13 +69,13 @@ function data() {
   var seasonConfirm=parseInt(temp);
   var specialConfirm=parseInt(temp1);
   var distantConfirm=parseInt(temp2);
-  RandomEpisode(seasonConfirm,specialConfirm,distantConfirm)
+  RandomEpisode(seasonConfirm,specialConfirm,distantConfirm);
 }
 
 if(window.location.href.search("adventure-time.best/seasons")) {
   node = document.getElementById('comments');
-	node.insertAdjacentHTML('beforeend', '<button type="button" onclick="data();">Random Episode (addon)</button>');
+  node.insertAdjacentHTML('beforeend', '<button type="button" style="background-color: lightblue;" onclick="data();">Random Episode (addon)</button>');
 } else if(window.location.href.search("adventure-time.best/adventure-time-s")) {
   node = document.getElementById('Blog1');
-	node.insertAdjacentHTML('beforebegin', '<button type="button" onclick="data();">Random Episode (addon)</button>');
+  node.insertAdjacentHTML('beforebegin', '<button type="button" style="background-color: lightblue;" onclick="data();">Random Episode (addon)</button>');
 }

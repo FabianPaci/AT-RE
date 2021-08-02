@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "Adventure Time Random Episode",
+  "version": "1.1",
+
+  "description": "Adds random episode functionality to 'adventure.time-best'",
+
+  "icons": {
+    "48": "./icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.adventure-time.best/*"],
+      "js": ["index.js"]
+    }
+  ]
+
+}
